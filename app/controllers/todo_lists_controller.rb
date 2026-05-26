@@ -1,5 +1,5 @@
 class TodoListsController < ApplicationController
-  before_action :set_todo_list, only: [ :show ]
+  before_action :set_todo_list, only: [ :show, :edit, :update]
 
   def index
     @todo_lists = TodoList.all
@@ -18,6 +18,17 @@ class TodoListsController < ApplicationController
       redirect_to todo_lists_path, notice: "Todo created successfully"
     else
       render :new, status: :unprocessable_content
+    end
+  end
+
+  def edit
+  end
+
+  def update
+    if @todo_list.update(set_todo_params)
+      redirect_to edit_todo_list_path(@todo_list), notice: "Todo updated successfully"
+    else
+      render :edit, status: :unprocessable_content
     end
   end
 
