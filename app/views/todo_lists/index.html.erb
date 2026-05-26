@@ -20,7 +20,8 @@
           <td> <%= todo_list.name%> </td>
           <td> <%= todo_list.description%> </td>
           <td>
-            <%= link_to "Show", todo_list_path(todo_list) %>
+            <%= link_to "Show", todo_list_path(todo_list) %> || 
+            <%= link_to "Edit", edit_todo_list_path(todo_list) %>
           </td>
       </tr>
     <% end %>

@@ -1,5 +1,5 @@
 class TodoListsController < ApplicationController
-  before_action :set_todo_list, only: [ :show ]
+  before_action :set_todo_list, only: [ :show, :edit]
 
   def index
     @todo_lists = TodoList.all
@@ -19,6 +19,9 @@ class TodoListsController < ApplicationController
     else
       render :new, status: :unprocessable_content
     end
+  end
+
+  def edit
   end
 
   private

@@ -2,4 +2,6 @@
 <p><strong>Name : </strong> <%= @todo_list.name %> </p>
 <p><strong>Description : </strong> <%= @todo_list.description %> </p>
 
+<%= link_to "Edit", edit_todo_list_path %> ||
 <%= link_to "Back to home", todo_lists_path %>
+
