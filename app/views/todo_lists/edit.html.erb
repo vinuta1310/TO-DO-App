@@ -1,5 +1,9 @@
 <h2> Edit Todo </h2>
 
+<% if notice %>
+ <p style="color: green;"><%= notice %></p>
+ <% end %>
+
 <%= render "form" %>
 
 <%= link_to "Show", todo_list_path(@todo_list) %> ||
