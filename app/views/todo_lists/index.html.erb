@@ -1,0 +1,22 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Tasks" %>
+
+<h1>Todo List</h1>
+
+<table border= 1>
+  <thead>
+    <tr>
+      <th> Name </th>
+      <th> Description </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <% @todo_lists.each do |todo_list| %>
+        <td> <%= todo_list.name%> </td>
+        <td> <%= todo_list.description%> </td>
+      <% end %>
+    </tr>
+  </tbody>
+</table>
